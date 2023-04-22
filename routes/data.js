@@ -13,7 +13,7 @@ router.get('/:id', async function(req, res) {
 
 router.post('/', async function(req, res, next) {
   try {
-    const response = await mongoHandler.putDocumentInCollection("data", req.body);
+    const response = await mongoHandler.postDocumentIntoCollection("data", req.body);
     res.send(response);
   } catch (error) {
     res.send(error);
